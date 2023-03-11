@@ -155,6 +155,7 @@ MonoBehaviour:
   targetType: 2
   targetTag: {fileID: 0}
   targetObject: {fileID: 0}
+  stoppingDistance: 0
   relativeMovement: 0
   rotateTowardsDirection: 0
   alignAxis: 0
@@ -730,13 +731,15 @@ MonoBehaviour:
   actionTags: []
   hasConditions: 0
   actionConditions:
-  - valueHandler: {fileID: 0}
+  - negate: 0
+    valueHandler: {fileID: 0}
     variable: {fileID: 0}
     valueType: 0
     tag: {fileID: 0}
     sourceTransform: {fileID: 0}
     rigidBody: {fileID: 0}
     axis: 0
+    probe: {fileID: 0}
     comparison: 0
     value: 0
     percentageCompare: 0
@@ -816,8 +819,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showInfo: 1
-  _explanation: "When button Fire2 is held (this can only happen every 5 seconds):\n
-    First, \n          spawns prefab Mine at the position of this object (Minelayer)\n         
+  _explanation: "When button Fire2 is held (this can only happen every 5 seconds):\nFirst,
+    \n          spawns prefab Mine at the position of this object (Minelayer)\n         
     plays sound shoot_sound at volume 1 and at pitch 1\n"
   description: 
   enableTrigger: 1
@@ -858,13 +861,15 @@ MonoBehaviour:
   actionTags: []
   hasConditions: 0
   actionConditions:
-  - valueHandler: {fileID: 0}
+  - negate: 0
+    valueHandler: {fileID: 0}
     variable: {fileID: 0}
     valueType: 0
     tag: {fileID: 0}
     sourceTransform: {fileID: 0}
     rigidBody: {fileID: 0}
     axis: 0
+    probe: {fileID: 0}
     comparison: 0
     value: 0
     percentageCompare: 0

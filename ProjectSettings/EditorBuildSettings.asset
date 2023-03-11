@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/JNeto Variations/Scenes/Kachan Scene.unity
     guid: d44957a1cbee9ff44a55b2a931e5722c
+  - enabled: 1
+    path: Assets/JNeto Variations/Scenes/FraggyScene.unity
+    guid: b5fca8f85f450944e857615099599d0d
   m_configObjects: {}
