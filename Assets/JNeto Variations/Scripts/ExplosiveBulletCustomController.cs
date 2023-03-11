@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BulletCustomController : MonoBehaviour {
+public class ExplosiveBulletCustomController : MonoBehaviour {
     
     [SerializeField] private GameObject bulletExplosion;
     
@@ -11,7 +11,6 @@ public class BulletCustomController : MonoBehaviour {
     
     void Update() {
         UpdateStatus();
-        // Debug.Log(_hits.GetValueString());
         if (IsExploding) 
             OverrideDeathWithExplosion();
     }

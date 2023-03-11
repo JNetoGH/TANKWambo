@@ -12,7 +12,7 @@ public class TriggerOnCollision : Trigger
     [SerializeField]
     private CollisionEvent eventType;
     [SerializeField]
-    private Hypertag[] tags;
+    public Hypertag[] tags;
 
     public override string GetTriggerTitle() { return "On Collision"; }
 

@@ -18,14 +18,16 @@ GameObject:
   - component: {fileID: 6933403823850466374}
   - component: {fileID: 2148154528363793688}
   - component: {fileID: 2347895089571103617}
-  - component: {fileID: 4194539480950360033}
   - component: {fileID: 1507535145854569937}
   - component: {fileID: 6493673961000930206}
   - component: {fileID: 7239150850540514488}
   - component: {fileID: 7254154097235373484}
   - component: {fileID: 1269620800184089644}
+  - component: {fileID: -4325306354380178253}
+  - component: {fileID: 5119078539862273497}
+  - component: {fileID: 4194539480950360033}
   m_Layer: 0
-  m_Name: DefaultBullet
+  m_Name: SplittableBulletMinion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,9 +87,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 5103727
-  m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingLayerID: 2003443225
+  m_SortingLayer: 4
+  m_SortingOrder: 12
   m_Sprite: {fileID: 21300000, guid: a55482220f0c3014cb2789070c69d22a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -169,8 +171,8 @@ MonoBehaviour:
   _explanation: Ricochet Counter
   description: Ricochet Counter
   type: 1
-  currentValue: 1
-  defaultValue: 1
+  currentValue: 2
+  defaultValue: 2
   isInteger: 0
   hasLimits: 1
   minValue: 0
@@ -235,8 +237,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _showInfo: 1
   _explanation: "Initialize bullet angle, velocity and ricochet counter when it spawns\n----------------\nWhen
-    this object is created:\n First, \n          select a random angle between 90
-    and 90 and set the velocity of _B_Default's rigid body towards that direction,
+    this object is created:\n          select a random angle between 90 and 90 and
+    set the velocity of SplittableBulletMinion's rigid body towards that direction,
     with a magnitude of 10; angles are relative to the object rotation\n"
   description: Initialize bullet angle, velocity and ricochet counter when it spawns
   enableTrigger: 1
@@ -299,8 +301,7 @@ MonoBehaviour:
   _showInfo: 1
   _explanation: "Destroys bullet when colliding with a Tank, Bullet or a Destructable
     object.\n----------------\nWhen a collision with a bounding volume with tags
-    [Tank,Bullet,Destructable,Explosion] starts:\n First, \n          destroys this
-    object\n"
+    [Tank,Destructable,Explosion,NULL] starts:\n          destroys this object\n"
   description: Destroys bullet when colliding with a Tank, Bullet or a Destructable
     object.
   enableTrigger: 1
@@ -314,36 +315,9 @@ MonoBehaviour:
   eventType: 0
   tags:
   - {fileID: 11400000, guid: 037282bf9c2be624db5e4dcee420102a, type: 2}
-  - {fileID: 11400000, guid: 5dd3ea1295091a146a4601c96116d46b, type: 2}
   - {fileID: 11400000, guid: f1bf613cb53582041bf2e99c2eaa77e5, type: 2}
   - {fileID: 11400000, guid: 7b6614cbd7549a4409447c67edf9f5f0, type: 2}
---- !u!114 &4194539480950360033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2364777538405152176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67b66a51b7fe64c4390ac471b7df316b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _showInfo: 1
-  _explanation: "When a collision with a trigger with tags [Mine] starts:\n First,
-    \n          destroys this object\n"
-  description: 
-  enableTrigger: 1
-  allowRetrigger: 1
-  hasPreconditions: 0
-  preConditions: []
-  actions:
-  - delay: 0
-    action: {fileID: 6493673961000930206}
-  isTrigger: 1
-  eventType: 0
-  tags:
-  - {fileID: 11400000, guid: f90f1732b9d544e43a32c5c49bf9be5a, type: 2}
+  - {fileID: 0}
 --- !u!114 &1507535145854569937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -357,20 +331,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showInfo: 1
-  _explanation: "If (_B_Default == 0) and When a collision with a bounding volume
-    with tags [Wall] starts:\n First, \n          destroys this object\n"
+  _explanation: "If ((SplittableBulletMinion == 0) and When a collision with a bounding
+    volume with tags [Wall] starts:\n          destroys this object\n"
   description: 
   enableTrigger: 1
   allowRetrigger: 1
   hasPreconditions: 1
   preConditions:
-  - valueHandler: {fileID: 3718626731985741047}
+  - negate: 0
+    valueHandler: {fileID: 3718626731985741047}
     variable: {fileID: 0}
     valueType: 0
     tag: {fileID: 0}
     sourceTransform: {fileID: 0}
     rigidBody: {fileID: 0}
     axis: 0
+    probe: {fileID: 0}
     comparison: 0
     value: 0
     percentageCompare: 0
@@ -417,22 +393,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showInfo: 1
-  _explanation: "Ricochet off walls.\n----------------\nIf (_B_Default > 0) and When
-    a collision with a bounding volume with tags [Wall] starts:\n First, \n         
+  _explanation: "Ricochet off walls.\n----------------\nIf ((SplittableBulletMinion
+    > 0) and When a collision with a bounding volume with tags [Wall] starts:\n         
     plays sound ricochet_sound at volume 1 and at pitch 1\n          adds -1 to variable
-    _B_Default\n"
+    SplittableBulletMinion\n"
   description: Ricochet off walls.
   enableTrigger: 1
   allowRetrigger: 1
   hasPreconditions: 1
   preConditions:
-  - valueHandler: {fileID: 3718626731985741047}
+  - negate: 0
+    valueHandler: {fileID: 3718626731985741047}
     variable: {fileID: 0}
     valueType: 0
     tag: {fileID: 0}
     sourceTransform: {fileID: 0}
     rigidBody: {fileID: 0}
     axis: 0
+    probe: {fileID: 0}
     comparison: 3
     value: 0
     percentageCompare: 0
@@ -494,6 +472,74 @@ MonoBehaviour:
   deltaValue: -1
   scaleWithTime: 0
   value: 0
+--- !u!114 &-4325306354380178253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2364777538405152176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67b66a51b7fe64c4390ac471b7df316b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: 'When a collision with a trigger starts:
+
+'
+  description: 
+  enableTrigger: 1
+  allowRetrigger: 1
+  hasPreconditions: 0
+  preConditions: []
+  actions: []
+  isTrigger: 1
+  eventType: 0
+  tags: []
+--- !u!114 &5119078539862273497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2364777538405152176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 056f0e198eb9a5e459ad2ad5b1de0af1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerOnCollisionBullet: {fileID: 4194539480950360033}
+  bulletTag: {fileID: 11400000, guid: 5dd3ea1295091a146a4601c96116d46b, type: 2}
+--- !u!114 &4194539480950360033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2364777538405152176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67b66a51b7fe64c4390ac471b7df316b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: "Destroys bullet when colliding with a Tank, Bullet or a Destructable
+    object.\n----------------\nWhen a collision with a bounding volume with tags
+    [NULL] starts:\n          destroys this object\n"
+  description: Destroys bullet when colliding with a Tank, Bullet or a Destructable
+    object.
+  enableTrigger: 1
+  allowRetrigger: 0
+  hasPreconditions: 0
+  preConditions: []
+  actions:
+  - delay: 0
+    action: {fileID: 6493673961000930206}
+  isTrigger: 0
+  eventType: 0
+  tags:
+  - {fileID: 0}
 --- !u!1 &2364777538626597467
 GameObject:
   m_ObjectHideFlags: 0
