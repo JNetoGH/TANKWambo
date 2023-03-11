@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/TANKWambo/TANKWambo_test.unity
     guid: 9a97f4c478efd404d968b50c4c45b52e
+  - enabled: 1
+    path: Assets/JNeto Variations/Kachan Explosive Bullet/Scene/Kachan Scene.unity
+    guid: d44957a1cbee9ff44a55b2a931e5722c
   m_configObjects: {}
