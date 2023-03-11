@@ -14,6 +14,9 @@ GameObject:
   - component: {fileID: 1332925993300595877}
   - component: {fileID: 3731806857907356522}
   - component: {fileID: 3202633432612523515}
+  - component: {fileID: -5504192214268589000}
+  - component: {fileID: -13249737676023433}
+  - component: {fileID: 7173401283761724869}
   m_Layer: 0
   m_Name: Explosion
   m_TagString: Untagged
@@ -139,7 +142,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -157,5 +160,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbd0f47c40e74bd468a4da707552648a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tankHypertag: {fileID: 11400000, guid: 037282bf9c2be624db5e4dcee420102a, type: 2}
-  playerHypertag: {fileID: 11400000, guid: 1e7c9d7a9c88a3b41bc3a78e56999984, type: 2}
+--- !u!114 &-5504192214268589000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4009281554543319203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6fc8a1e9dd21634a9cb00402422ec6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: 
+  description: 
+  hypertags:
+  - {fileID: 11400000, guid: 7b6614cbd7549a4409447c67edf9f5f0, type: 2}
+--- !u!114 &-13249737676023433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4009281554543319203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 766d16681200cf841a49e1df59f6076f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: Plays sound explosion_sound at volume 1 and at pitch 1
+  description: 
+  enableAction: 1
+  hasTags: 0
+  actionTags: []
+  hasConditions: 0
+  actionConditions: []
+  clip: {fileID: 8300000, guid: a3777dde23b2c3349b87729f6fde366d, type: 3}
+  volume: {x: 1, y: 1}
+  pitch: {x: 1, y: 1}
+--- !u!114 &7173401283761724869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4009281554543319203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe33e4a0e2979294d8e04d307e34bb03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: "When this object is created:\n          plays sound explosion_sound
+    at volume 1 and at pitch 1\n"
+  description: 
+  enableTrigger: 1
+  allowRetrigger: 1
+  hasPreconditions: 0
+  preConditions: []
+  actions:
+  - delay: 0
+    action: {fileID: -13249737676023433}
