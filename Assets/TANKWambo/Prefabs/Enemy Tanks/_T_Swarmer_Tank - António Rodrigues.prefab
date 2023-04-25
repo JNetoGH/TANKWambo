@@ -22,8 +22,9 @@ GameObject:
   - component: {fileID: 6215826327044917344}
   - component: {fileID: 6257964811370029371}
   - component: {fileID: 1470842988599954581}
+  - component: {fileID: 3509738248046063611}
   m_Layer: 0
-  m_Name: _T_Swarmer_Tank
+  m_Name: "_T_Swarmer_Tank - Ant\xF3nio Rodrigues"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -443,6 +444,25 @@ MonoBehaviour:
   actionConditions: []
   target: {fileID: 4294608846636077200}
   state: 0
+--- !u!114 &3509738248046063611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4294608846636077210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6fc8a1e9dd21634a9cb00402422ec6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: 
+  description: 
+  hypertags:
+  - {fileID: 11400000, guid: 037282bf9c2be624db5e4dcee420102a, type: 2}
+  - {fileID: 11400000, guid: 419bb0c4c960c1843b8184c6d8c41fa7, type: 2}
+  - {fileID: 11400000, guid: 0aae75a34dd81134d8e47ff9d644cd5d, type: 2}
 --- !u!1 &4294608847043264373
 GameObject:
   m_ObjectHideFlags: 0
