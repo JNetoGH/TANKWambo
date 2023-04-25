@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/TANKWambo/Scenes/TANKWambo_Level_4.unity
     guid: edfcc2483c2efc24690c10664c887831
+  - enabled: 1
+    path: Assets/TANKWambo/Scenes/TANKWambo_Level_5.unity
+    guid: 3b3d6a9f07e85c546843ce134f942c26
+  - enabled: 1
+    path: Assets/TANKWambo/Scenes/TANKWambo_Level_6.unity
+    guid: 6c7e5afdb2dcc6847a6a7813600b6353
   m_configObjects: {}
