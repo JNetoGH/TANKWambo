@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/TANKWambo/Scenes/TANKWambo_Level_0.unity
+    guid: df0d903ba040dbc488a91126cfcd041b
+  - enabled: 1
     path: Assets/TANKWambo/Scenes/TANKWambo_Level_1.unity
     guid: 19e607c197cba2e4bb3fd986a82c9eb5
   - enabled: 1
