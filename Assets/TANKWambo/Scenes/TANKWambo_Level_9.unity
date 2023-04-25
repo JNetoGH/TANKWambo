@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sniper (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5638374283921754690, guid: 4dd353cde00fd2944b4c015f2b1d43df, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dd353cde00fd2944b4c015f2b1d43df, type: 3}
 --- !u!1 &94019393
@@ -432,6 +436,10 @@ PrefabInstance:
     - target: {fileID: 4294608846636077210, guid: 14f81f90d62d0ff4da7329e0f7ba6bb2, type: 3}
       propertyPath: m_Name
       value: "_T_Swarmer_Tank - Ant\xF3nio Rodrigues"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4294608846636077210, guid: 14f81f90d62d0ff4da7329e0f7ba6bb2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14f81f90d62d0ff4da7329e0f7ba6bb2, type: 3}
@@ -964,6 +972,10 @@ PrefabInstance:
     - target: {fileID: 5638374283921754690, guid: 4dd353cde00fd2944b4c015f2b1d43df, type: 3}
       propertyPath: m_Name
       value: Sniper
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638374283921754690, guid: 4dd353cde00fd2944b4c015f2b1d43df, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dd353cde00fd2944b4c015f2b1d43df, type: 3}
@@ -11003,6 +11015,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "_T_3_Cannon_Tank - Ant\xF3nio Rodrigues"
       objectReference: {fileID: 0}
+    - target: {fileID: 6831983965304286346, guid: 15f4d0e48cd7e2942913fcb4bdd520ec, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15f4d0e48cd7e2942913fcb4bdd520ec, type: 3}
 --- !u!1001 &893952762
@@ -11059,6 +11075,10 @@ PrefabInstance:
     - target: {fileID: 4294608846636077210, guid: 14f81f90d62d0ff4da7329e0f7ba6bb2, type: 3}
       propertyPath: m_Name
       value: "_T_Swarmer_Tank - Ant\xF3nio Rodrigues (1)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4294608846636077210, guid: 14f81f90d62d0ff4da7329e0f7ba6bb2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14f81f90d62d0ff4da7329e0f7ba6bb2, type: 3}
@@ -14983,6 +15003,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: JNetoBasicEnemyTank (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5450339261023702158, guid: 0fd491199509aae45bd8c73c99050747, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fd491199509aae45bd8c73c99050747, type: 3}
 --- !u!1001 &2052160366
@@ -15039,6 +15063,10 @@ PrefabInstance:
     - target: {fileID: 5450339261023702158, guid: 0fd491199509aae45bd8c73c99050747, type: 3}
       propertyPath: m_Name
       value: JNetoBasicEnemyTank
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450339261023702158, guid: 0fd491199509aae45bd8c73c99050747, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fd491199509aae45bd8c73c99050747, type: 3}
@@ -15767,14 +15795,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showInfo: 1
-  _explanation: Switches to scene TANKWambo_Level2
+  _explanation: Switches to scene TANKWambo_Level_0
   description: 
   enableAction: 1
   hasTags: 0
   actionTags: []
   hasConditions: 0
   actionConditions: []
-  sceneName: TANKWambo_Level2
+  sceneName: TANKWambo_Level_0
 --- !u!1 &1371704692623351137
 GameObject:
   m_ObjectHideFlags: 0
@@ -15808,7 +15836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _showInfo: 1
   _explanation: "When ((TagCount(EnemyTank) <= 0):\n          disables trigger UNDEFINED\nthen,
-    at 2 seconds, \n          switches to scene TANKWambo_Level2\n"
+    at 2 seconds, \n          switches to scene TANKWambo_Level_0\n"
   description: 
   enableTrigger: 1
   allowRetrigger: 1
