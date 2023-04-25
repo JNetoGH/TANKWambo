@@ -14993,8 +14993,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showInfo: 1
-  _explanation: "When ((TagCount(EnemyTank) <= 0):\n          disables trigger UNDEFINED\nthen,
-    at 2 seconds, \n          switches to scene TANKWambo_Level2\n"
+  _explanation: "When ((TagCount(EnemyTank) <= 0):\n          disables trigger UNDEFINED\n
+    then, at 2 seconds, \n          switches to scene TANKWambo_Level_1\n"
   description: 
   enableTrigger: 1
   allowRetrigger: 1
