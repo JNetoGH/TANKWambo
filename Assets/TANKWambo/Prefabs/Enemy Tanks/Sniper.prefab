@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showInfo: 1
-  _explanation: "Every [5,10] seconds, trigger the actions::\n          spawns prefab
+  _explanation: "Every [3,4] seconds, trigger the actions::\n          spawns prefab
     _B_Sniperbullet at the position of Bullet Spawner\n          plays sound shoot_sound
     at volume 1 and at pitch 1\n"
   description: 
@@ -157,7 +157,7 @@ MonoBehaviour:
   - delay: 0
     action: {fileID: 7867712837973070476}
   startTriggered: 0
-  timeInterval: {x: 5, y: 10}
+  timeInterval: {x: 3, y: 4}
 --- !u!114 &4516815240453559058
 MonoBehaviour:
   m_ObjectHideFlags: 0
