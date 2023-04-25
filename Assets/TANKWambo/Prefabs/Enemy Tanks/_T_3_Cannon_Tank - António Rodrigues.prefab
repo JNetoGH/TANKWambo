@@ -119,8 +119,9 @@ GameObject:
   - component: {fileID: 12563356}
   - component: {fileID: 12563359}
   - component: {fileID: 12563360}
+  - component: {fileID: 4020765604902531301}
   m_Layer: 0
-  m_Name: _T_3_Cannon_Tank
+  m_Name: "_T_3_Cannon_Tank - Ant\xF3nio Rodrigues"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -360,9 +361,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showInfo: 1
-  _explanation: "When ((ProbeIntersect(3_Cannon_Tank,[Wall,Destructable]):\n         
-    disables component 3_Cannon_Tank (MovementFollow) on 3_Cannon_Tank\nelse\n         
-    enables component 3_Cannon_Tank (MovementFollow) on 3_Cannon_Tank\n"
+  _explanation: "When ((ProbeIntersect(_T_3_Cannon_Tank - Ant\xF3nio Rodrigues,[Wall,Destructable]):\n         
+    disables component _T_3_Cannon_Tank - Ant\xF3nio Rodrigues (OkapiKit.MovementFollow)
+    on _T_3_Cannon_Tank - Ant\xF3nio Rodrigues\nelse\n          enables component
+    _T_3_Cannon_Tank - Ant\xF3nio Rodrigues (OkapiKit.MovementFollow) on _T_3_Cannon_Tank
+    - Ant\xF3nio Rodrigues\n"
   description: 
   enableTrigger: 1
   allowRetrigger: 1
@@ -508,6 +511,25 @@ MonoBehaviour:
   targetTag: {fileID: 11400000, guid: 1e7c9d7a9c88a3b41bc3a78e56999984, type: 2}
   cameraObject: {fileID: 0}
   cameraTag: {fileID: 0}
+--- !u!114 &4020765604902531301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6831983965304286346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6fc8a1e9dd21634a9cb00402422ec6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: 
+  description: 
+  hypertags:
+  - {fileID: 11400000, guid: 037282bf9c2be624db5e4dcee420102a, type: 2}
+  - {fileID: 11400000, guid: 419bb0c4c960c1843b8184c6d8c41fa7, type: 2}
+  - {fileID: 11400000, guid: 0aae75a34dd81134d8e47ff9d644cd5d, type: 2}
 --- !u!1 &6831983965635261547
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,9 +673,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showInfo: 1
-  _explanation: "If (not (ProbeIntersect(3_Cannon_Tank,[Wall]) and Every 2 seconds,
-    trigger the actions::\n          spawns prefab _B_Default at the position of
-    Bullet Spawner\n          plays sound shoot_sound at volume 1 and at pitch 1\n"
+  _explanation: "If (not (ProbeIntersect(_T_3_Cannon_Tank - Ant\xF3nio Rodrigues,[Wall])
+    and Every 2 seconds, trigger the actions::\n          spawns prefab _B_Default
+    at the position of Bullet Spawner\n          plays sound shoot_sound at volume
+    1 and at pitch 1\n"
   description: 
   enableTrigger: 1
   allowRetrigger: 1
@@ -976,9 +999,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showInfo: 1
-  _explanation: "If (not (ProbeIntersect(3_Cannon_Tank,[Wall]) and Every 2 seconds,
-    trigger the actions::\n          spawns prefab _B_Default at the position of
-    Bullet Spawner\n          plays sound shoot_sound at volume 1 and at pitch 1\n"
+  _explanation: "If (not (ProbeIntersect(_T_3_Cannon_Tank - Ant\xF3nio Rodrigues,[Wall])
+    and Every 2 seconds, trigger the actions::\n          spawns prefab _B_Default
+    at the position of Bullet Spawner\n          plays sound shoot_sound at volume
+    1 and at pitch 1\n"
   description: 
   enableTrigger: 1
   allowRetrigger: 1
@@ -1166,9 +1190,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showInfo: 1
-  _explanation: "If (not (ProbeIntersect(3_Cannon_Tank,[Wall]) and Every 2 seconds,
-    trigger the actions::\n          spawns prefab _B_Default at the position of
-    Bullet Spawner\n          plays sound shoot_sound at volume 1 and at pitch 1\n"
+  _explanation: "If (not (ProbeIntersect(_T_3_Cannon_Tank - Ant\xF3nio Rodrigues,[Wall])
+    and Every 2 seconds, trigger the actions::\n          spawns prefab _B_Default
+    at the position of Bullet Spawner\n          plays sound shoot_sound at volume
+    1 and at pitch 1\n"
   description: 
   enableTrigger: 1
   allowRetrigger: 1
