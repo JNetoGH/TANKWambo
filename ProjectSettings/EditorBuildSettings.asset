@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/TANKWambo/Scenes/JNeto_Level_Tests.unity
+    path: Assets/TANKWambo/Scenes/Tests/JNeto_Level_Tests.unity
     guid: b305f68681591f843acc689c9f671e67
   m_configObjects: {}
