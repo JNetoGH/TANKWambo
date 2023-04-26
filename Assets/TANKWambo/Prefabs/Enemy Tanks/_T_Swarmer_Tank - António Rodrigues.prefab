@@ -160,7 +160,7 @@ MonoBehaviour:
   _showInfo: 1
   _explanation: 'Destroys objects with tags [Player] '
   description: 
-  enableAction: 1
+  enableAction: 0
   hasTags: 0
   actionTags: []
   hasConditions: 0
@@ -343,11 +343,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showInfo: 1
-  _explanation: "When ((ProbeIntersect(_T_Swarmer_Tank - Ant\xF3nio Rodrigues (2),[Wall,Destructable]):\n         
-    disables component _T_Swarmer_Tank - Ant\xF3nio Rodrigues (2) (OkapiKit.MovementFollow)
-    on _T_Swarmer_Tank - Ant\xF3nio Rodrigues (2)\nelse\n          enables component
-    _T_Swarmer_Tank - Ant\xF3nio Rodrigues (2) (OkapiKit.MovementFollow) on _T_Swarmer_Tank
-    - Ant\xF3nio Rodrigues (2)\n"
+  _explanation: "When ((ProbeIntersect(_T_Swarmer_Tank - Ant\xF3nio Rodrigues,[Wall,Destructable]):\n         
+    disables component _T_Swarmer_Tank - Ant\xF3nio Rodrigues (OkapiKit.MovementFollow)
+    on _T_Swarmer_Tank - Ant\xF3nio Rodrigues\nelse\n          enables component
+    _T_Swarmer_Tank - Ant\xF3nio Rodrigues (OkapiKit.MovementFollow) on _T_Swarmer_Tank
+    - Ant\xF3nio Rodrigues\n"
   description: 
   enableTrigger: 1
   allowRetrigger: 1
@@ -465,7 +465,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 037282bf9c2be624db5e4dcee420102a, type: 2}
   - {fileID: 11400000, guid: 419bb0c4c960c1843b8184c6d8c41fa7, type: 2}
   - {fileID: 11400000, guid: 0aae75a34dd81134d8e47ff9d644cd5d, type: 2}
-  - {fileID: 11400000, guid: 5dd3ea1295091a146a4601c96116d46b, type: 2}
+  - {fileID: 11400000, guid: bd84c32df9e614a45972e9e7b8cb1c15, type: 2}
 --- !u!1 &4294608847043264373
 GameObject:
   m_ObjectHideFlags: 0

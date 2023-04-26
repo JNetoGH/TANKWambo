@@ -403,6 +403,8 @@ MonoBehaviour:
 '
   description: 
   speed: {x: 4, y: 4}
+  limitSpeed: 0
+  speedLimit: 100
   useRotation: 0
   turnToDirection: 1
   axisToAlign: 0
@@ -419,6 +421,8 @@ MonoBehaviour:
   horizontalKeyNegative: 276
   verticalKeyPositive: 273
   verticalKeyNegative: 274
+  inertiaEnable: 0
+  inertiaStopTime: 0
 --- !u!114 &8382344259849635930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -432,10 +436,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showInfo: 1
-  _explanation: "When a collision with a bounding volume with tags [Bullet,Explosion]
-    starts:\n First, \n          plays sound explosion_sound at volume 1 and at pitch
-    1\n          enables trigger UNDEFINED\n          destroys this object\n         
-    Destroys object Crosshair\n"
+  _explanation: "When a collision with a bounding volume with tags [Bullet,Explosion,Swarmer]
+    starts:\n          plays sound explosion_sound at volume 1 and at pitch 1\n         
+    enables trigger UNDEFINED\n          destroys this object\n          Destroys
+    object Crosshair\n"
   description: 
   enableTrigger: 1
   allowRetrigger: 0
@@ -455,6 +459,7 @@ MonoBehaviour:
   tags:
   - {fileID: 11400000, guid: 5dd3ea1295091a146a4601c96116d46b, type: 2}
   - {fileID: 11400000, guid: 7b6614cbd7549a4409447c67edf9f5f0, type: 2}
+  - {fileID: 11400000, guid: bd84c32df9e614a45972e9e7b8cb1c15, type: 2}
 --- !u!114 &8382344259849635934
 MonoBehaviour:
   m_ObjectHideFlags: 0
