@@ -110,16 +110,15 @@ GameObject:
   - component: {fileID: 6831983965304286347}
   - component: {fileID: 12563351}
   - component: {fileID: 12563350}
+  - component: {fileID: 4020765604902531301}
   - component: {fileID: 12563352}
+  - component: {fileID: 12563360}
   - component: {fileID: 7882361785403663889}
-  - component: {fileID: 249324898819057280}
-  - component: {fileID: 12563353}
   - component: {fileID: 12563354}
+  - component: {fileID: 12563353}
   - component: {fileID: 12563355}
   - component: {fileID: 12563356}
   - component: {fileID: 12563359}
-  - component: {fileID: 12563360}
-  - component: {fileID: 4020765604902531301}
   m_Layer: 0
   m_Name: "_T_3_Cannon_Tank - Ant\xF3nio Rodrigues"
   m_TagString: Untagged
@@ -235,6 +234,25 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.6
+--- !u!114 &4020765604902531301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6831983965304286346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6fc8a1e9dd21634a9cb00402422ec6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: 
+  description: 
+  hypertags:
+  - {fileID: 11400000, guid: 037282bf9c2be624db5e4dcee420102a, type: 2}
+  - {fileID: 11400000, guid: 419bb0c4c960c1843b8184c6d8c41fa7, type: 2}
+  - {fileID: 11400000, guid: 0aae75a34dd81134d8e47ff9d644cd5d, type: 2}
 --- !u!114 &12563352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,6 +285,47 @@ MonoBehaviour:
   maxRotationSpeed: 360
   cameraObject: {fileID: 0}
   cameraTag: {fileID: 0}
+--- !u!114 &12563360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6831983965304286346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 880a5ca005d24084a800be5935ef4bbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: 'This object will align its up axis with the direction towards the
+    closest object tagged with Player, at a maximum 200 degrees per second.
+
+'
+  description: 
+  speed: 200
+  mode: 3
+  inputType: 0
+  rotationAxis: Horizontal
+  rotationButtonPositive: Right
+  rotationButtonNegative: Left
+  rotationKeyPositive: 275
+  rotationKeyNegative: 276
+  rotationAxisX: Horizontal
+  rotationAxisY: Vertical
+  rotationButtonPositiveX: Right
+  rotationButtonNegativeX: Left
+  rotationButtonPositiveY: Up
+  rotationButtonNegativeY: Down
+  rotationKeyPositiveX: 275
+  rotationKeyNegativeX: 276
+  rotationKeyPositiveY: 273
+  rotationKeyNegativeY: 274
+  axisToAlign: 0
+  targetObject: {fileID: 0}
+  targetTag: {fileID: 11400000, guid: 1e7c9d7a9c88a3b41bc3a78e56999984, type: 2}
+  cameraObject: {fileID: 0}
+  cameraTag: {fileID: 0}
 --- !u!114 &7882361785403663889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,7 +341,6 @@ MonoBehaviour:
   _showInfo: 1
   _explanation: "When a collision with a bounding volume with tags [Bullet,Explosion]
     starts:\n          plays sound explosion_sound at volume 1 and at pitch 1\n         
-    spawns prefab _M_Explosion at the position of this object (3_Cannon_Tank)\n         
     destroys the parent of this object\n"
   description: 
   enableTrigger: 1
@@ -293,61 +351,12 @@ MonoBehaviour:
   - delay: 0
     action: {fileID: 6610787717946518881}
   - delay: 0
-    action: {fileID: 249324898819057280}
-  - delay: 0
     action: {fileID: 3809256950150978157}
   isTrigger: 0
   eventType: 0
   tags:
   - {fileID: 11400000, guid: 5dd3ea1295091a146a4601c96116d46b, type: 2}
   - {fileID: 11400000, guid: 7b6614cbd7549a4409447c67edf9f5f0, type: 2}
---- !u!114 &249324898819057280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6831983965304286346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e3e7a99a4ca9064085e4a2664ef1f1c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _showInfo: 1
-  _explanation: Spawns prefab _M_Explosion at the position of this object (3_Cannon_Tank)
-  description: 
-  enableAction: 1
-  hasTags: 0
-  actionTags: []
-  hasConditions: 0
-  actionConditions: []
-  prefabObject: {fileID: 5739637227751177036, guid: 0649cc4f9111bdd46bd6f2775016fca3, type: 3}
-  spawnPosition: 1
-  targetPosition: {fileID: 0}
-  targetTag: {fileID: 0}
-  setParent: 0
---- !u!114 &12563353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6831983965304286346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56e9241509df85c44871f6a996f27c6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _showInfo: 1
-  _explanation: Enables component 3_Cannon_Tank (MovementFollow) on 3_Cannon_Tank
-  description: 
-  enableAction: 1
-  hasTags: 0
-  actionTags: []
-  hasConditions: 0
-  actionConditions: []
-  target: {fileID: 12563352}
-  state: 0
 --- !u!114 &12563354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,6 +400,28 @@ MonoBehaviour:
   elseActions:
   - delay: 0
     action: {fileID: 12563353}
+--- !u!114 &12563353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6831983965304286346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56e9241509df85c44871f6a996f27c6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: Enables component 3_Cannon_Tank (MovementFollow) on 3_Cannon_Tank
+  description: 
+  enableAction: 1
+  hasTags: 0
+  actionTags: []
+  hasConditions: 0
+  actionConditions: []
+  target: {fileID: 12563352}
+  state: 0
 --- !u!114 &12563355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -470,66 +501,6 @@ MonoBehaviour:
   targetTransform: {fileID: 0}
   dirTransform: {fileID: 0}
   dirTag: {fileID: 11400000, guid: 1e7c9d7a9c88a3b41bc3a78e56999984, type: 2}
---- !u!114 &12563360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6831983965304286346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 880a5ca005d24084a800be5935ef4bbe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _showInfo: 1
-  _explanation: 'This object will align its up axis with the direction towards the
-    closest object tagged with Player, at a maximum 200 degrees per second.
-
-'
-  description: 
-  speed: 200
-  mode: 3
-  inputType: 0
-  rotationAxis: Horizontal
-  rotationButtonPositive: Right
-  rotationButtonNegative: Left
-  rotationKeyPositive: 275
-  rotationKeyNegative: 276
-  rotationAxisX: Horizontal
-  rotationAxisY: Vertical
-  rotationButtonPositiveX: Right
-  rotationButtonNegativeX: Left
-  rotationButtonPositiveY: Up
-  rotationButtonNegativeY: Down
-  rotationKeyPositiveX: 275
-  rotationKeyNegativeX: 276
-  rotationKeyPositiveY: 273
-  rotationKeyNegativeY: 274
-  axisToAlign: 0
-  targetObject: {fileID: 0}
-  targetTag: {fileID: 11400000, guid: 1e7c9d7a9c88a3b41bc3a78e56999984, type: 2}
-  cameraObject: {fileID: 0}
-  cameraTag: {fileID: 0}
---- !u!114 &4020765604902531301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6831983965304286346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6fc8a1e9dd21634a9cb00402422ec6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _showInfo: 1
-  _explanation: 
-  description: 
-  hypertags:
-  - {fileID: 11400000, guid: 037282bf9c2be624db5e4dcee420102a, type: 2}
-  - {fileID: 11400000, guid: 419bb0c4c960c1843b8184c6d8c41fa7, type: 2}
-  - {fileID: 11400000, guid: 0aae75a34dd81134d8e47ff9d644cd5d, type: 2}
 --- !u!1 &6831983965635261547
 GameObject:
   m_ObjectHideFlags: 0

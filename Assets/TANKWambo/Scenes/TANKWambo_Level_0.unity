@@ -156,7 +156,7 @@ MonoBehaviour:
   _showInfo: 1
   _explanation: "Reset game when player is killed. Trigger is called from player
     collision.\n----------------\nEvery [0.5,5] seconds, trigger the actions::\n         
-    switches to scene TANKWambo_test\n"
+    switches to scene TANKWambo_Level_0\n"
   description: Reset game when player is killed. Trigger is called from player collision.
   enableTrigger: 0
   allowRetrigger: 1
@@ -202,7 +202,7 @@ MonoBehaviour:
   actionTags: []
   hasConditions: 0
   actionConditions: []
-  sceneName: TANKWambo_test
+  sceneName: TANKWambo_Level_0
 --- !u!1001 &145370534
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14993,8 +14993,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showInfo: 1
-  _explanation: "When ((TagCount(EnemyTank) <= 0):\n          disables trigger UNDEFINED\n
-    then, at 2 seconds, \n          switches to scene TANKWambo_Level_1\n"
+  _explanation: "When ((TagCount(EnemyTank) <= 0):\n          disables trigger UNDEFINED\nthen,
+    at 2 seconds, \n          switches to scene TANKWambo_Level_1\n"
   description: 
   enableTrigger: 1
   allowRetrigger: 1

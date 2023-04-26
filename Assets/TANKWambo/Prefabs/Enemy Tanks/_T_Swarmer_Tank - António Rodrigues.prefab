@@ -10,19 +10,18 @@ GameObject:
   m_Component:
   - component: {fileID: 4294608846636077208}
   - component: {fileID: 4294608846636077211}
-  - component: {fileID: 4294608846636077207}
-  - component: {fileID: 4294608846636077206}
-  - component: {fileID: 4294608846636077204}
-  - component: {fileID: 4294608846636077205}
-  - component: {fileID: 4294608846636077200}
   - component: {fileID: 4294608846636077203}
   - component: {fileID: 4294608846636077202}
+  - component: {fileID: 3509738248046063611}
+  - component: {fileID: 4294608846636077200}
+  - component: {fileID: 4294608846636077207}
   - component: {fileID: 4294608846636077201}
   - component: {fileID: 6915772943607699658}
+  - component: {fileID: 4294608846636077204}
+  - component: {fileID: 4294608846636077205}
   - component: {fileID: 6215826327044917344}
-  - component: {fileID: 6257964811370029371}
   - component: {fileID: 1470842988599954581}
-  - component: {fileID: 3509738248046063611}
+  - component: {fileID: 6257964811370029371}
   m_Layer: 0
   m_Name: "_T_Swarmer_Tank - Ant\xF3nio Rodrigues"
   m_TagString: Untagged
@@ -102,154 +101,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4294608846636077207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4294608846636077210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3203f38d4afc6a4283618fa1df06ecc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _showInfo: 1
-  _explanation: "When ((DistanceTo(Tag[Player]) <= 1.3):\n          destroys objects
-    with tags [Player] \n          spawns an entity using spawner, but there's no
-    spawner in object!\n          destroys this object\n"
-  description: 
-  enableTrigger: 1
-  allowRetrigger: 1
-  hasPreconditions: 0
-  preConditions: []
-  actions:
-  - delay: 0
-    action: {fileID: 4294608846636077206}
-  - delay: 0
-    action: {fileID: 4294608846636077204}
-  - delay: 0
-    action: {fileID: 4294608846636077205}
-  conditions:
-  - negate: 0
-    valueHandler: {fileID: 0}
-    variable: {fileID: 0}
-    valueType: 8
-    tag: {fileID: 11400000, guid: 1e7c9d7a9c88a3b41bc3a78e56999984, type: 2}
-    sourceTransform: {fileID: 0}
-    rigidBody: {fileID: 0}
-    axis: 0
-    probe: {fileID: 0}
-    movementPlatformer: {fileID: 0}
-    comparison: 2
-    value: 1.3
-    percentageCompare: 0
-  elseActions: []
---- !u!114 &4294608846636077206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4294608846636077210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e75877c0562c0e49a1475541c319262, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _showInfo: 1
-  _explanation: 'Destroys objects with tags [Player] '
-  description: 
-  enableAction: 0
-  hasTags: 0
-  actionTags: []
-  hasConditions: 0
-  actionConditions: []
-  target: 4
-  targetObject: {fileID: 0}
-  tags:
-  - {fileID: 11400000, guid: 1e7c9d7a9c88a3b41bc3a78e56999984, type: 2}
---- !u!114 &4294608846636077204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4294608846636077210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e3e7a99a4ca9064085e4a2664ef1f1c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _showInfo: 1
-  _explanation: Spawns prefab _M_Explosion_Swarmer at the position of this object
-    (Swarm_Tank)
-  description: 
-  enableAction: 1
-  hasTags: 0
-  actionTags: []
-  hasConditions: 0
-  actionConditions: []
-  prefabObject: {fileID: 5739637227751177036, guid: 98c271d943ef05e4a8f65163eeb458d2, type: 3}
-  spawnPosition: 1
-  targetPosition: {fileID: 0}
-  targetTag: {fileID: 0}
-  setParent: 0
---- !u!114 &4294608846636077205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4294608846636077210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e75877c0562c0e49a1475541c319262, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _showInfo: 1
-  _explanation: Destroys this object
-  description: 
-  enableAction: 1
-  hasTags: 0
-  actionTags: []
-  hasConditions: 0
-  actionConditions: []
-  target: 0
-  targetObject: {fileID: 0}
-  tags: []
---- !u!114 &4294608846636077200
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4294608846636077210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a821a52a563d1854e98869fa6bd62ee4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _showInfo: 1
-  _explanation: 'Follows the closest object tagged with [Player], at 15 units per
-    second.
-
-    This object''s up''s axis will rotate towards the direction of movement,
-    at a maximum speed of 360 degrees/sec.
-
-'
-  description: 
-  speed: 15
-  targetType: 0
-  targetTag: {fileID: 11400000, guid: 1e7c9d7a9c88a3b41bc3a78e56999984, type: 2}
-  targetObject: {fileID: 0}
-  stoppingDistance: 0
-  relativeMovement: 0
-  rotateTowardsDirection: 1
-  alignAxis: 0
-  maxRotationSpeed: 360
-  cameraObject: {fileID: 0}
-  cameraTag: {fileID: 0}
 --- !u!50 &4294608846636077203
 Rigidbody2D:
   serializedVersion: 4
@@ -287,6 +138,98 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.6
+--- !u!114 &3509738248046063611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4294608846636077210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6fc8a1e9dd21634a9cb00402422ec6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: 
+  description: 
+  hypertags:
+  - {fileID: 11400000, guid: 037282bf9c2be624db5e4dcee420102a, type: 2}
+  - {fileID: 11400000, guid: 419bb0c4c960c1843b8184c6d8c41fa7, type: 2}
+  - {fileID: 11400000, guid: 0aae75a34dd81134d8e47ff9d644cd5d, type: 2}
+  - {fileID: 11400000, guid: bd84c32df9e614a45972e9e7b8cb1c15, type: 2}
+--- !u!114 &4294608846636077200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4294608846636077210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a821a52a563d1854e98869fa6bd62ee4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: 'Follows the closest object tagged with [Player], at 15 units per
+    second.
+
+    This object''s up''s axis will rotate towards the direction of movement,
+    at a maximum speed of 360 degrees/sec.
+
+'
+  description: 
+  speed: 15
+  targetType: 0
+  targetTag: {fileID: 11400000, guid: 1e7c9d7a9c88a3b41bc3a78e56999984, type: 2}
+  targetObject: {fileID: 0}
+  stoppingDistance: 0
+  relativeMovement: 0
+  rotateTowardsDirection: 1
+  alignAxis: 0
+  maxRotationSpeed: 360
+  cameraObject: {fileID: 0}
+  cameraTag: {fileID: 0}
+--- !u!114 &4294608846636077207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4294608846636077210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3203f38d4afc6a4283618fa1df06ecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: "When ((DistanceTo(Tag[Player]) <= 1.3):\n          spawns an entity
+    using spawner, but there's no spawner in object!\n          destroys this object\n"
+  description: 
+  enableTrigger: 1
+  allowRetrigger: 1
+  hasPreconditions: 0
+  preConditions: []
+  actions:
+  - delay: 0
+    action: {fileID: 4294608846636077204}
+  - delay: 0
+    action: {fileID: 4294608846636077205}
+  conditions:
+  - negate: 0
+    valueHandler: {fileID: 0}
+    variable: {fileID: 0}
+    valueType: 8
+    tag: {fileID: 11400000, guid: 1e7c9d7a9c88a3b41bc3a78e56999984, type: 2}
+    sourceTransform: {fileID: 0}
+    rigidBody: {fileID: 0}
+    axis: 0
+    probe: {fileID: 0}
+    movementPlatformer: {fileID: 0}
+    comparison: 2
+    value: 1.3
+    percentageCompare: 0
+  elseActions: []
 --- !u!114 &4294608846636077201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -373,6 +316,55 @@ MonoBehaviour:
   elseActions:
   - delay: 0
     action: {fileID: 1470842988599954581}
+--- !u!114 &4294608846636077204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4294608846636077210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3e7a99a4ca9064085e4a2664ef1f1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: Spawns prefab _M_Explosion_Swarmer at the position of this object
+    (Swarm_Tank)
+  description: 
+  enableAction: 1
+  hasTags: 0
+  actionTags: []
+  hasConditions: 0
+  actionConditions: []
+  prefabObject: {fileID: 5739637227751177036, guid: 98c271d943ef05e4a8f65163eeb458d2, type: 3}
+  spawnPosition: 1
+  targetPosition: {fileID: 0}
+  targetTag: {fileID: 0}
+  setParent: 0
+--- !u!114 &4294608846636077205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4294608846636077210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e75877c0562c0e49a1475541c319262, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: Destroys this object
+  description: 
+  enableAction: 1
+  hasTags: 0
+  actionTags: []
+  hasConditions: 0
+  actionConditions: []
+  target: 0
+  targetObject: {fileID: 0}
+  tags: []
 --- !u!114 &6215826327044917344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -395,6 +387,28 @@ MonoBehaviour:
   actionConditions: []
   target: {fileID: 4294608846636077200}
   state: 1
+--- !u!114 &1470842988599954581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4294608846636077210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56e9241509df85c44871f6a996f27c6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: Enables component Swarm_Tank (MovementFollow) on Swarm_Tank
+  description: 
+  enableAction: 1
+  hasTags: 0
+  actionTags: []
+  hasConditions: 0
+  actionConditions: []
+  target: {fileID: 4294608846636077200}
+  state: 0
 --- !u!114 &6257964811370029371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -424,48 +438,6 @@ MonoBehaviour:
   targetTransform: {fileID: 0}
   dirTransform: {fileID: 0}
   dirTag: {fileID: 11400000, guid: 1e7c9d7a9c88a3b41bc3a78e56999984, type: 2}
---- !u!114 &1470842988599954581
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4294608846636077210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56e9241509df85c44871f6a996f27c6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _showInfo: 1
-  _explanation: Enables component Swarm_Tank (MovementFollow) on Swarm_Tank
-  description: 
-  enableAction: 1
-  hasTags: 0
-  actionTags: []
-  hasConditions: 0
-  actionConditions: []
-  target: {fileID: 4294608846636077200}
-  state: 0
---- !u!114 &3509738248046063611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4294608846636077210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6fc8a1e9dd21634a9cb00402422ec6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _showInfo: 1
-  _explanation: 
-  description: 
-  hypertags:
-  - {fileID: 11400000, guid: 037282bf9c2be624db5e4dcee420102a, type: 2}
-  - {fileID: 11400000, guid: 419bb0c4c960c1843b8184c6d8c41fa7, type: 2}
-  - {fileID: 11400000, guid: 0aae75a34dd81134d8e47ff9d644cd5d, type: 2}
-  - {fileID: 11400000, guid: bd84c32df9e614a45972e9e7b8cb1c15, type: 2}
 --- !u!1 &4294608847043264373
 GameObject:
   m_ObjectHideFlags: 0
